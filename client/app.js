@@ -29,6 +29,9 @@ req.on('socket', function (socket) {
     console.log('req socket timeout');
   });
 });
+req.on('error', function (err) {
+  console.error(err);
+});
 req.end();
 
 var misc = require('../misc');
